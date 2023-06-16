@@ -1,0 +1,10 @@
+SQL che restituisce la lista di tutte le nazioni
+mostrando nome, id, nome della regione e nome del continente, ordinata
+per nome della nazione.
+
+
+SELECT c.name AS country_name, c.country_id, r.name AS region_name, cn.name AS continent_name
+FROM countries c
+JOIN regions r ON c.region_id = r.region_id
+JOIN continents cn ON r.continent_id = cn.continent_id
+ORDER BY c.name;
